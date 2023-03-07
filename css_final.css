@@ -1,31 +1,7 @@
-Skip to content
-Search or jump to…
-Pull requests
-Issues
-Codespaces
-Marketplace
-Explore
- 
-@PrasanHombal 
-zangetsu-isshin
-/
-dropdown-filter
-Public
-Fork your own copy of zangetsu-isshin/dropdown-filter
-Code
-Issues
-Pull requests
-Actions
-Projects
-Security
-Insights
-dropdown-filter/css_final.css
-@zangetsu-isshin
-zangetsu-isshin Create css_final.css
-Latest commit 6ad8d13 on Nov 9, 2021
- History
- 1 contributor
-97 lines (65 sloc)  1.37 KB
+     /* Set background color to red if enabled is false */
+td.disabled {
+        background-color: red;
+}
 
 * {
     margin: 0px;
@@ -36,7 +12,7 @@ Latest commit 6ad8d13 on Nov 9, 2021
 
 
 .heading {
-    display: flex;
+    text-align: center;
     background-color: #232f3e;
     box-shadow: 0px 1px 2px #232f3e;
 
