@@ -1,0 +1,1994 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        padding: 5px;
+      }
+
+      /* Set background color to red if enabled is false */
+      td.disabled {
+        background-color: red;
+      }
+    </style>
+	<link rel="stylesheet" href="./css_final.css">    
+    <script src="./filter.js"></script>
+  </head>
+  <body>
+    <table id="emp-table">
+      <thead>
+        <tr>
+          <th col-index = 1>Environment Name
+		    <select class="table-filter" onchange="filter_rows()">
+                    <option value="all"></option>
+                </select>
+				</th>
+          <th col-index = 2>Policy Name
+		    <select class="table-filter" onchange="filter_rows()">
+                    <option value="all"></option>
+                </select></th>
+          <th col-index = 3>Enabled
+		    <select class="table-filter" onchange="filter_rows()">
+                    <option value="all"></option>
+                </select>
+				</th>
+        </tr>
+      </thead>
+      <tbody>
+                <tr>
+          <td>VCS-WFO-a25</td>
+          <td>OpsGenie - GCC</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a25</td>
+          <td>Opsgenie-Sanbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a25</td>
+          <td>Test - Sandbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a25</td>
+          <td>VCS Slack Alert Policy</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a9</td>
+          <td>Opsgenie-Sanbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-inst</td>
+          <td>OpsGenie - GCC</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-inst</td>
+          <td>Opsgenie-Sanbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-inst</td>
+          <td>Test - Sandbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-inst</td>
+          <td>VCS Slack Alert Policy</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a21</td>
+          <td>OpsGenie - GCC</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a21</td>
+          <td>Opsgenie -Sandbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a21</td>
+          <td>Test - Sandbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a21</td>
+          <td>VCS Slack Alert Policy</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a36</td>
+          <td>OpsGenie - GCC</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a36</td>
+          <td>Opsgenie-Sanbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a36</td>
+          <td>VCS Slack Alert Policy</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-F2-UE</td>
+          <td>OpsGenie - GCC</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-F2-UE</td>
+          <td>VCS - Synthetic Errors</td>
+          <td class="disabled">
+            False
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a55</td>
+          <td>OpsGenie - GCC</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a55</td>
+          <td>Opsgenie -Sandbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a55</td>
+          <td>Test - Sandbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a55</td>
+          <td>VCS Slack Alert Policy</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a31</td>
+          <td>Capacity Review</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a31</td>
+          <td>Opsgenie-Sanbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a47</td>
+          <td>OpsGenie - GCC</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a47</td>
+          <td>Opsgenie -Sandbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a47</td>
+          <td>Test - Sandbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a47</td>
+          <td>VCS Slack Alert Policy</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a52</td>
+          <td>OpsGenie - GCC</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a52</td>
+          <td>Opsgenie -Sandbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a52</td>
+          <td>Test - Sandbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a52</td>
+          <td>VCS Slack Alert Policy</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-M1</td>
+          <td>OpsGenie - GCC</td>
+          <td class="disabled">
+            False
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a2</td>
+          <td>OpsGenie - GCC</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a2</td>
+          <td>Opsgenie -Sandbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a2</td>
+          <td>Opsgenie-Sanbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a2</td>
+          <td>Test - Sandbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a2</td>
+          <td>VCS Slack Alert Policy</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a5</td>
+          <td>OpsGenie - GCC</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a5</td>
+          <td>Opsgenie -Sandbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a5</td>
+          <td>Test - Sandbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a5</td>
+          <td>VCS Slack Alert Policy</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a40</td>
+          <td>Opsgenie-Sanbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a6</td>
+          <td>Opsgenie -Sandbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a6</td>
+          <td>Opsgenie-GCC</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a6</td>
+          <td>Test - Sandbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a6</td>
+          <td>VCS Slack Alert Policy</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-ROOT</td>
+          <td>My Policy</td>
+          <td class="disabled">
+            False
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-ROOT</td>
+          <td>VCS-Slack</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-XMT1</td>
+          <td>Agent Availability</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-mon2</td>
+          <td>OpsGenie - GCC</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-mon2</td>
+          <td>Test - Sandbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-mon2</td>
+          <td>VCS Slack Alert Policy</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a33</td>
+          <td>OpsGenie - GCC</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a33</td>
+          <td>Opsgenie-Sanbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a33</td>
+          <td>Test - Sandbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a33</td>
+          <td>VCS Slack Alert Policy</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a8</td>
+          <td>OpsGenie - GCC</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a8</td>
+          <td>Opsgenie-Sanbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a14</td>
+          <td>OpsGenie - GCC</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a14</td>
+          <td>Opsgenie -Sandbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a14</td>
+          <td>Test - Sandbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a14</td>
+          <td>VCS Slack Alert Policy</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-farm</td>
+          <td>OpsGenie - GCC</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-farm</td>
+          <td>Opsgenie-Sanbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-farm</td>
+          <td>Test - Sandbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-farm</td>
+          <td>VCS Slack Alert Policy</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a56</td>
+          <td>OpsGenie - GCC</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a56</td>
+          <td>VCS Slack Alert Policy</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a29</td>
+          <td>OpsGenie - GCC</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a29</td>
+          <td>Opsgenie -Sandbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a29</td>
+          <td>Test - Sandbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a29</td>
+          <td>VCS Slack Alert Policy</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a51</td>
+          <td>OpsGenie - GCC</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a51</td>
+          <td>VCS Slack Alert Policy</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a58</td>
+          <td>OpsGenie - GCC</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a57</td>
+          <td>OpsGenie - GCC</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a57</td>
+          <td>Opsgenie -Sandbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a38</td>
+          <td>Opsgenie-Sanbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-IKEA</td>
+          <td>OpsGenie - GCC</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-IKEA</td>
+          <td>Opsgenie -Sandbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-IKEA</td>
+          <td>Opsgenie-Sanbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-IKEA</td>
+          <td>Test - Sandbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-IKEA</td>
+          <td>VCS Slack Alert Policy</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a46</td>
+          <td>OpsGenie - GCC</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-LBR</td>
+          <td>OpsGenie - GCC</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-LBR</td>
+          <td>Opsgenie-Sanbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-LBR</td>
+          <td>Test - Sandbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-LBR</td>
+          <td>VCS Slack Alert Policy</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a7</td>
+          <td>OpsGenie - GCC</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a7</td>
+          <td>Opsgenie -Sandbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a7</td>
+          <td>Test - Sandbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a7</td>
+          <td>VCS Slack Alert Policy</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a34</td>
+          <td>OpsGenie - GCC</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a34</td>
+          <td>Opsgenie-Sanbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a34</td>
+          <td>Temporary -AWS infra</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a34</td>
+          <td>Test - Sandbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a37</td>
+          <td>OpsGenie - GCC</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a37</td>
+          <td>Opsgenie-Sanbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a37</td>
+          <td>Test - Sandbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a37</td>
+          <td>VCS Slack Alert Policy</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a4</td>
+          <td>OpsGenie - GCC</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a4</td>
+          <td>Opsgenie -Sandbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a4</td>
+          <td>Test - Sandbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a53</td>
+          <td>OpsGenie - GCC</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-MT4</td>
+          <td>OpsGenie - GCC</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-MT4</td>
+          <td>Opsgenie -Sandbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-MT4</td>
+          <td>RAFT</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-MT4</td>
+          <td>Test - Sandbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-MT4</td>
+          <td>VCS Slack Alert Policy</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-GMS</td>
+          <td>OpsGenie - GCC</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-GMS</td>
+          <td>Opsgenie-Sanbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-GMS</td>
+          <td>Test - Sandbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-A30</td>
+          <td>OpsGenie - GCC</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-A30</td>
+          <td>Opsgenie -Sandbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-A30</td>
+          <td>Test - Sandbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-A30</td>
+          <td>VCS Slack Alert Policy</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a15</td>
+          <td>OpsGenie - GCC</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a15</td>
+          <td>Opsgenie -Sandbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a15</td>
+          <td>Test - Sandbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-MT3</td>
+          <td>OpsGenie - GCC</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-MT3</td>
+          <td>Opsgenie - Sanbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-MT3</td>
+          <td>Test - Sandbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-MT3</td>
+          <td>VCS Slack Alert Policy</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-qa3</td>
+          <td>Opsgenie - Sanbox</td>
+          <td class="disabled">
+            False
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a3</td>
+          <td>OpsGenie - GCC</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a3</td>
+          <td>Opsgenie -Sandbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a3</td>
+          <td>Test - Sandbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a3</td>
+          <td>VCS Slack Alert Policy</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-POCLAB</td>
+          <td>JVM/CLR crashguard</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-POCLAB</td>
+          <td>Opsgenie - GCC</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-POCLAB</td>
+          <td>Opsgenie - sandbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-POCLAB</td>
+          <td>Thread Dump on Resource Usage Issue</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a23</td>
+          <td>OpsGenie - GCC</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a23</td>
+          <td>Opsgenie-Sanbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a23</td>
+          <td>Test - Sandbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a23</td>
+          <td>VCS Slack Alert Policy</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-mt6</td>
+          <td>OpsGenie - GCC</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-mt6</td>
+          <td>Opsgenie -Sandbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-mt6</td>
+          <td>RAFT</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-mt6</td>
+          <td>Test - Sandbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-mt6</td>
+          <td>VCS Slack Alert Policy</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a13</td>
+          <td>Opsgenie-Sanbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-qa2</td>
+          <td>Opsgenie Sandbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-mt5</td>
+          <td>OpsGenie - GCC</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-mt5</td>
+          <td>Opsgenie -Sandbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-mt5</td>
+          <td>VCS Slack Alert Policy</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-F4</td>
+          <td>OpsGenie - GCC</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-F4</td>
+          <td>Opsgenie -Sandbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-F4</td>
+          <td>Test - Sandbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-F4</td>
+          <td>VCS - Disk Space Alert</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-F4</td>
+          <td>VCS Slack Alert Policy</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a32</td>
+          <td>OpsGenie - GCC</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a32</td>
+          <td>Opsgenie-Sanbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a65</td>
+          <td>OpsGenie - GCC</td>
+          <td class="disabled">
+            False
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-F2</td>
+          <td>OpsGenie - GCC</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-F2</td>
+          <td>Sandbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-F2</td>
+          <td>Test - Sandbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-F2</td>
+          <td>VCS_Slack</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-qa</td>
+          <td>ASR Testing - Fis uptime</td>
+          <td class="disabled">
+            False
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-qa</td>
+          <td>Opsgenie -Sandbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-qa</td>
+          <td>Recorder Tomcat</td>
+          <td class="disabled">
+            False
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-qa</td>
+          <td>RIS uptime</td>
+          <td class="disabled">
+            False
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-qa</td>
+          <td>Speech Tomcat</td>
+          <td class="disabled">
+            False
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a28</td>
+          <td>Opsgenie-Sanbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-NHS</td>
+          <td>Agent Availability</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-NHS</td>
+          <td>OpsGenie - GCC</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-NHS</td>
+          <td>Opsgenie -Sandbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-NHS</td>
+          <td>Opsgenie-Sanbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-NHS</td>
+          <td>Test - Sandbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-NHS</td>
+          <td>VCS Slack Alert Policy</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a11</td>
+          <td>OpsGenie - GCC</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a11</td>
+          <td>Opsgenie -Sandbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a11</td>
+          <td>Test - Sandbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a11</td>
+          <td>VCS Slack Alert Policy</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a26</td>
+          <td>OpsGenie - GCC</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a26</td>
+          <td>Opsgenie-Sanbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a26</td>
+          <td>VCS Slack Alert Policy</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a43</td>
+          <td>OpsGenie - GCC</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a43</td>
+          <td>Opsgenie -Sandbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a43</td>
+          <td>VCS Slack Alert Policy</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a24</td>
+          <td>OpsGenie - GCC</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a24</td>
+          <td>Opsgenie -Sandbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a24</td>
+          <td>Test - Sandbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a24</td>
+          <td>VCS Slack Alert Policy</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-LD</td>
+          <td>Launchdarkly</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a61</td>
+          <td>OpsGenie - GCC</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a61</td>
+          <td>Opsgenie -Sandbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a61</td>
+          <td>Test - Sandbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a61</td>
+          <td>VCS Slack Alert Policy</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-MT2</td>
+          <td>BT - Threaddump</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-MT2</td>
+          <td>OpsGenie - GCC</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-MT2</td>
+          <td>Opsgenie - Sanbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-MT2</td>
+          <td>RAFT</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-MT2</td>
+          <td>Test - Sandbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-MT2</td>
+          <td>Test - TRS</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-MT2</td>
+          <td>VCS Slack Alert Policy</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a60</td>
+          <td>OpsGenie - GCC</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a60</td>
+          <td>Opsgenie -Sandbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a60</td>
+          <td>VCS Slack Alert Policy</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-MTWFO</td>
+          <td>OpsGenie - GCC</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-MTWFO</td>
+          <td>Opsgenie -Sandbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-MTWFO</td>
+          <td>Test - Sandbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-ASR</td>
+          <td>ASR Integration Server</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-ASR</td>
+          <td>ASR Rectomcat</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-ASR</td>
+          <td>ASR Speechtomcat</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-ASR</td>
+          <td>ASR TRStomcat</td>
+          <td class="disabled">
+            False
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a19</td>
+          <td>Opsgenie-Sanbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a49</td>
+          <td>OpsGenie - GCC</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a49</td>
+          <td>Opsgenie -Sandbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a49</td>
+          <td>Test - Sandbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a49</td>
+          <td>VCS Slack Alert Policy</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a50</td>
+          <td>OpsGenie - GCC</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a50</td>
+          <td>Opsgenie -Sandbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a50</td>
+          <td>Test - Sandbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a50</td>
+          <td>VCS Slack Alert Policy</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a17</td>
+          <td>Opsgenie -GCC</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a17</td>
+          <td>Opsgenie-Sanbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a17</td>
+          <td>Test - Sandbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a17</td>
+          <td>VCS Slack Alert Policy</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-HIG</td>
+          <td>OpsGenie - GCC</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-HIG</td>
+          <td>Opsgenie-Sanbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-HIG</td>
+          <td>Test - Sandbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-HIG</td>
+          <td>VCS Slack Alert Policy</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a39</td>
+          <td>OpsGenie - GCC</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a39</td>
+          <td>Opsgenie-Sanbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a10</td>
+          <td>OpsGenie - GCC</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a10</td>
+          <td>Opsgenie -Sandbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a10</td>
+          <td>Test - Sandbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a10</td>
+          <td>VCS Slack Alert Policy</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a12</td>
+          <td>OpsGenie - GCC</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a12</td>
+          <td>Opsgenie -Sandbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a12</td>
+          <td>Test - Sandbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a12</td>
+          <td>VCS Slack Alert Policy</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a35</td>
+          <td>Opsgenie-Sanbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a54</td>
+          <td>OpsGenie - GCC</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a62</td>
+          <td>OpsGenie - GCC</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a62</td>
+          <td>Opsgenie -Sandbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a62</td>
+          <td>Test - Sandbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a62</td>
+          <td>VCS Slack Alert Policy</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a16</td>
+          <td>OpsGenie - GCC</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a16</td>
+          <td>Opsgenie -Sandbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a16</td>
+          <td>Test - Sandbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a16</td>
+          <td>VCS Slack Alert Policy</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a27</td>
+          <td>OpsGenie - GCC</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a27</td>
+          <td>Opsgenie -Sandbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a27</td>
+          <td>Test - Sandbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a27</td>
+          <td>VCS Slack Alert Policy</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-HIG2</td>
+          <td>Agent Availability</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-HIG2</td>
+          <td>OpsGenie - GCC</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-HIG2</td>
+          <td>VCS-Slack</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a42</td>
+          <td>Opsgenie-Sanbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a18</td>
+          <td>OpsGenie - GCC</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a18</td>
+          <td>Opsgenie -Sandbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a18</td>
+          <td>Test - Sandbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a18</td>
+          <td>VCS Slack Alert Policy</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-mt8</td>
+          <td>OpsGenie - GCC</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-mt8</td>
+          <td>Opsgnie -Sanbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-mt8</td>
+          <td>Test - Sandbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-mt8</td>
+          <td>VCS Slack Alert Policy</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a1</td>
+          <td>OpsGenie - GCC</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a1</td>
+          <td>Opsgenie -Sandbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a1</td>
+          <td>Test - Sandbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a1</td>
+          <td>VCS Slack Alert Policy</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a41</td>
+          <td>OpsGenie - GCC</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a41</td>
+          <td>Opsgenie-Sanbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a41</td>
+          <td>Test - Sandbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-mt7</td>
+          <td>OpsGenie - GCC</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-mt7</td>
+          <td>Opsgenie - Sandbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-mt7</td>
+          <td>Sanbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-mt7</td>
+          <td>Test - Sandbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-mt7</td>
+          <td>VCS Slack Alert Policy</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a20</td>
+          <td>OpsGenie - GCC</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a20</td>
+          <td>Opsgenie -Sandbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a20</td>
+          <td>Test - Sandbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a20</td>
+          <td>VCS Slack Alert Policy</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a44</td>
+          <td>OpsGenie - GCC</td>
+          <td >
+            True
+          </td>
+        </tr>
+                <tr>
+          <td>VCS-WFO-a44</td>
+          <td>Opsgenie-Sanbox</td>
+          <td >
+            True
+          </td>
+        </tr>
+              </tbody>
+    </table>
+	 <script>
+        getUniqueValuesFromColumn();
+        
+    </script>
+  </body>
+</html>

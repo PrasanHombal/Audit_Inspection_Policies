@@ -1,0 +1,65 @@
+---
+- name: uri module demo
+  hosts: localhost
+  become: false
+  vars:
+    server: "https://verintamericas.saas.appdynamics.com"
+    endpoint: "/controller/rest/applications?output=json"
+  tasks:
+    # Fetch the list of AppD application Ids
+    - name: Reading server nodes
+      ansible.builtin.uri:
+        url: "{{ server }}{{ endpoint }}"
+        user: Sankumar@verintamericas
+        password: QAZ123plm$$
+        force_basic_auth: yes
+        return_content: yes
+        method: GET
+        status_code: 200
+        timeout: 30
+      register: result
+      
+    # Declare empty array object to store the fetched AppD application Ids
+    - name: Initialize list of IDs
+      set_fact:
+       id_list: []
+
+    # Fetch only the Environments whose name include the string 'VCS-WFO-' and initialze the id_list
+    - name: Extract IDs
+      set_fact:
+        name_id_map: "{{ name_id_map|default({})|combine({item.name: item.id}) }}"
+      loop: "{{ result.content }}"
+      when: item.name is search("VCS-WFO-")
+    
+    # Call the health-rules API for the fetched environments
+    - name: Calling Health checks
+      ansible.builtin.uri:
+        url: "https://verintamericas.saas.appdynamics.com/controller/alerting/rest/v1/applications/{{item.value}}/policies"
+        user: Sankumar@verintamericas
+        password: QAZ123plm$$
+        force_basic_auth: yes
+        return_content: yes
+        method: GET
+        status_code: 200
+        timeout: 30
+      with_dict: "{{ name_id_map }}"
+      loop_control:
+       loop_var: item
+      register: respo
+
+    # Initialize health_rules object with the fetched data
+    - name: Extract health_rules
+      set_fact:
+       health_rules: "{{ health_rules|default({})|combine({item.item.key: item.json}) }}"
+      loop: "{{ respo.results }}"
+      
+    - name: Set JSON array fact
+      set_fact:
+       json_array: "{{ health_rules | dict2items | subelements('value') }}"
+      
+    - name: Create HTML output
+      template:
+        src: Audit_Inspection_Policies.html.j2
+        dest: Audit_Inspection_Policies.html
+      vars:
+       json_array: "{{ json_array }}"
