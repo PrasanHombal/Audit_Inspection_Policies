@@ -29,7 +29,7 @@
       set_fact:
         name_id_map: "{{ name_id_map|default({})|combine({item.name: item.id}) }}"
       loop: "{{ result.content }}"
-      when: item.name is search("VCS-WFO-")
+      when: item.name is search("VCS-WFO-a15")
     
     # Call the health-rules API for the fetched environments
     - name: Calling Health checks
@@ -63,3 +63,22 @@
         dest: Audit_Inspection_Policies.html
       vars:
        json_array: "{{ json_array }}"
+    
+    - name: Find the current directory of the template file
+      set_fact:
+       template_dir: "{{ playbook_dir | dirname }}"
+      vars:
+       item: "Audit_Inspection_Policies.html.j2"
+  
+    - name: Print the current directory of the template file
+      debug:
+       var: template_dir
+       
+    - name: Print the file path constructed using the template_dir variable
+      debug:
+       var: "file://{{ template_dir }}/Audit_Inspection_Policies.html"
+       
+    - name: Open the generated HTML file in a browser
+      command: "xdg-open 'file://{{ template_dir }}/Audit_Inspection_Policies.html'"
+           
+   
